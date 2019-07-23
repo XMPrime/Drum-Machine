@@ -113,22 +113,27 @@ class App extends React.Component {
     }
     // this.handleKeyDown = this.handleKeyDown.bind(this)
     // this.handleClick = this.handleClick.bind(this)
+    this.soundNameToggle = this.soundNameToggle.bind(this)
   
   } 
+
+  soundNameToggle(soundId) {
+    this.setState({
+      currentPadBankId: soundId
+    })
+  }
 
   render() {
     return(
       <div className="appContainer">
-        <PadBank currentPadBank={this.state.currentPadBank} />
-        <SoundNameDisplay />
+        <PadBank currentPadBank={this.state.currentPadBank} soundNameToggle={this.soundNameToggle} />
+        <SoundNameDisplay currentPadBankId={this.state.currentPadBankId} />
         <DrumToggles />
       </div>
     )
   }
 
-  // componentDidMount() {
-  //   document.addEventListener("keydown", this.handleKeyDown.bind(this))
-  // }
+
 
   // // playSound(event) {
   // //   render () {

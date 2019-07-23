@@ -9,8 +9,8 @@ class SoundNameDisplay extends React.Component {
 
     render() {
         return(
-            <div>
-                
+            <div className="soundNameDisplay">
+                <p>{this.props.currentPadBankId}</p>
             </div>
         )
     }

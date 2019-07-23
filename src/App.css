@@ -24,13 +24,30 @@
 }
 
 .appContainer {
-  width: 600px;
-  height: 800px;
+  width: 205px;
+  height: 300px;
+  padding: 15px;
   border: solid goldenrod;
 }
 
-.drum-pad {
-  display: inline;
+.padBank {
+  display: inline-block;
+  margin: auto;
+  border: solid blue;
+  
+}
+.drumPad {
+  display: inline-block;
+  border: solid darkgray;
+  text-align: center;
+  
+  height: 50px;
+  width: 50px;
+
+}
+
+.soundNameDisplay {
+  text-align: center;
 }
 
 @keyframes App-logo-spin {

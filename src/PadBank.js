@@ -11,7 +11,13 @@ class PadBank extends React.Component {
     render() {
         let padBank = this.props.currentPadBank.map((sound,i,bankArr) => {
             return(
-                <DrumPad key={bankArr[i].keyCode} soundId={bankArr[i].id} keyTrigger={bankArr[i].keyTrigger} url={bankArr[i].url} />
+                <DrumPad 
+                    key={bankArr[i].keyCode} 
+                    soundId={bankArr[i].id} 
+                    keyTrigger={bankArr[i].keyTrigger} 
+                    url={bankArr[i].url} 
+                    soundNameToggle={this.props.soundNameToggle} 
+                />
             )
         })
         
